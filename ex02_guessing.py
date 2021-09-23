@@ -4,13 +4,13 @@ import random
 # Let's create the methods we will need
 
 def give_guessing_number(min, max):
-    guessing_number = random.randint(min, max)
-    return guessing_number
+    guessing_number_m = random.randint(min, max)
+    return guessing_number_m
 
 
 def request_number(min, max):
     given_number_int = min - 1
-    while given_number_int < min or given_number_str > max:
+    while given_number_int < min or given_number_int > max:
         given_number_str = input(f'Rentrez un nombre compris entre {min} et {max} : ')
         try:
             given_number_int = int(given_number_str)
@@ -18,7 +18,7 @@ def request_number(min, max):
                 print(f'Le nombre doit être compris {min} entre  et {max} !')
                 given_number_int = 0
             else:
-                return given_number_int;
+                return given_number_int
         except ValueError:
             print('ERREUR : Rentrez un nombre valide svp !')
 
