@@ -27,9 +27,9 @@ def play_the_game(chance_number_f, number_given_by_user_f, guessing_number_f, mi
     while chance_number_f > 0:
         print(f"Nombre de chance : {chance_number_f}")
         number_given_by_user_f = request_number(min, max)
-        if guessing_number_f < number_given_by_user_f:
+        if guessing_number_f > number_given_by_user_f:
             print(f"Attention {number_given_by_user_f} est PLUS PETIT que le numéro de devinette !")
-        elif guessing_number_f > number_given_by_user_f:
+        elif guessing_number_f < number_given_by_user_f:
             print(f"Attention {number_given_by_user_f} est PLUS GRAND que le numéro de devinette !")
         else:
             print(f"BRAVO ! Vous avez trouvé le numéro de devinette !")
